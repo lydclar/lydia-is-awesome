@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+
+<Layout title="Lydia Made This">
+	
+	<main>
+			<defs>
+				<linearGradient
+					id="paint0_linear_1805_24383"
+					x1="247.358"
+					y1="0"
+					x2="247.358"
+					y2="622.479"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stop-opacity="0.9"></stop>
+					<stop offset="1" stop-opacity="0.2"></stop>
+				</linearGradient>
+			</defs>
+		</svg>
+		<h1 class="header" style="text-align: center;">Lydia is awesome!</h1>
+		
+		<div class="content">
+		
+		<p style="font-size:30px">Meet our CEO, Baby Kitten.<p>
+		<br>
+		<img
+            src="/epic.png"
+            width={260}
+            height={260}
+            alt="MEOW"
+			id="ceo"
+            class="rounded-2xl aspect-thumbnail object-cover"
+        />
+
+		<p class="instructions">
+			"Meow meow meow meow meow <strong>meow</strong> meow.<br />
+			<strong>meow</strong>. Meow meow meow meow, meow meow!"
+		</p>
+
+		<br>
+
+		<div class="container">
+			<div class="center">
+				<button id="spinButton" class="ceo-button">Spin the CEO!</button>
+			</div>
+		</div>
+
+  		<script>
+			const spinButton = document.getElementById('spinButton');
+			const catImage = document.getElementById('ceo');
+
+			spinButton.addEventListener('click', () => {
+  			catImage.classList.toggle('rotated');
+});
+		</script>
+
+		<br>
+		<br>
+
+		</div>
+
+	</main>
+	
+</Layout>
+
+
+
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.content{
+		width:400px;
+		margin: 0 auto;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+
+	#ceo {
+  		transition: transform 2s ease-in-out;
+	}
+
+	.rotated {
+  		transform: rotate(720deg);
+	}
+
+	.ceo-button {
+  appearance: button;
+  background-color: white;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: hotpink;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 20px 24px; /* Adjust padding values here */
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+.ceo-button:after {
+  background-clip: padding-box;
+  background-color: whitesmoke;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.ceo-button:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.ceo-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.ceo-button:disabled {
+  cursor: auto;
+}
+
+.ceo-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+</style>
