@@ -1,7 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="this is cool">
-<p style="color:lightcyan">This page does not exist yet because I am still learning!</p>
+    <h1 class="header" style="text-align:center">FAQs 
+        <img
+        src="/images/baby.png"
+        width="60"
+        height="60"
+        alt="MEOW"
+        id="lil-guy"
+        class="rounded-2xl aspect-thumbnail object-cover"
+        />
+    </h1>
+    <div>
+        <Card title="Where is Lydia from?" body="Shreveport, Louisiana"></Card>
+        <br>
+        <Card title="What is Lydia's name?" body="Lydia"></Card>
+        <br>
+        <Card title="How many bees can you fit in a pillowcase?" body="This number has not been conceptualized yet. Check back later!"></Card>
+        <br>
+        <Card title="How may I help you?" body="Yeah, hi, uhhhhhhm can I get a double cheeseburger meal with a medium fry and a sprite? And is there any way that I could maybe get no lettuce on that? Okay, thank you. Also, I want to get another burger but completely plain with just the patty and the bun. Yeah. Yeah, it's for my grandma, haha. Okay cool, thank you!"></Card>
+    </div>
+
 </Layout>
+
+<style>
+    .header{
+        text-align:center;
+        font-family: din-round,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: .8px;
+        color: white;
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: center;
+    }
+
+    /* Adjust margin or padding as needed */
+    .header h1 {
+        margin-right: 16px; /* Adjust spacing between header and image */
+    }
+</style>
